@@ -2,6 +2,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import animation
 
+"""
+    This script creates an animated plot of the Mandelbrot set.
+    You can import the function mandelbrot() to create a static plot.
+"""
+
 MAX_DENSITY = 100
 n = 1000
 m = 1000
@@ -74,5 +79,5 @@ if __name__ == '__main__':
     
     ani = animation.FuncAnimation(fig, updatefig, interval=10, blit=True)
     # Save animation
-    ani.save('mandelbrot.gif', writer='imagemagick', fps=10)
+    ani.save(f'mandelbrot_to_{MAX_DENSITY}.gif', writer='imagemagick', fps=10)
     # plt.show()
